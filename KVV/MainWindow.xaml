@@ -11,10 +11,10 @@
         <Label x:Name="lb_getal_2" Content="Getal 2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="573.987,31.377,0,0"/>
         <TextBox x:Name="tbGetal1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="99,35.377,0,0"/>
         <TextBox x:Name="tbGetal2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="639,35.377,0,0"/>
-        <Button x:Name="btBereken" Content="Bereken" HorizontalAlignment="Left" Margin="351,63.5,0,0" VerticalAlignment="Top" Width="81" Height="24.46"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="31.999,106.02,36,182.02" TextWrapping="Wrap" VerticalAlignment="Center" Height="134.46" Width="727.001" Background="#FF1D1D1D" LineHeight="11" Foreground="#FFE69F23" FontSize="36" Text="Bereken het kleinste gemene veelvoud" FontWeight="Bold"/>
+        <Button x:Name="btBereken" Content="Bereken" HorizontalAlignment="Left" Margin="351,63.5,0,0" VerticalAlignment="Top" Width="81" Height="24.46" Click="btBereken_Click"/>
+        <TextBlock x:Name="tbantwoord" HorizontalAlignment="Center" Margin="31.999,106.02,36,182.02" TextWrapping="Wrap" VerticalAlignment="Center" Height="134.46" Width="727.001" Background="#FF1D1D1D" LineHeight="11" Foreground="#FFE69F23" FontSize="36" Text="Bereken het kleinste gemene veelvoud" FontWeight="Bold"/>
         <CheckBox x:Name="cbOntbinden" Content="Op basis van ontbinden" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31.999,254.48,0,0"/>
-        <Button x:Name="btEinde" Content="Bereken" HorizontalAlignment="Left" Margin="351,272,0,0" VerticalAlignment="Top" Width="81" Height="24.46" Background="#FFBF0303" Foreground="White"/>
+        <Button x:Name="btEinde" Content="Bereken" HorizontalAlignment="Left" Margin="351,272,0,0" VerticalAlignment="Top" Width="81" Height="24.46" Background="#FFBF0303" Foreground="White" Click="btEinde_Click"/>
 
     </Grid>
 </Window>
