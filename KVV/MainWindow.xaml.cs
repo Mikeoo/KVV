@@ -27,21 +27,43 @@ namespace KVV
 
         private void btBereken_Click(object sender, RoutedEventArgs e)
         {
+            if (cbOntbinden.IsChecked == true)
+            {
+                tbantwoord.Text = $" Grootste gemene deler van {tbGetal1.Text} & {tbGetal2.Text} is {GCD(Convert.ToInt32(tbGetal1.Text), Convert.ToInt32(tbGetal2.Text))} !";
 
-            tbantwoord.Text = $"Het kleinste gemene veelvoud van {tbGetal1.Text} & {tbGetal2.Text} is 6 ";
+            }
+            else
+            {
+                tbantwoord.Text = $" Kleinste gemene veelvoud van {tbGetal1.Text} & {tbGetal2.Text} is {LCM(Convert.ToInt32(tbGetal1.Text), Convert.ToInt32(tbGetal2.Text))} !";
+            }
         }
 
         private void btEinde_Click(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
         #region hulpfuncties
-        // Return the least common multiple
-        // (LCM) of two numbers.
-        private long LCM(long a, long b)
+
+        public int GCD(int i, int j)
+        {
+            int a = Math.Abs(i);
+            int b = Math.Abs(j);
+
+            // Pull out remainders.
+            for (; ; )
+            {
+                int remainder = a % b;
+                if (remainder == 0) return b;
+                a = b;
+                b = remainder;
+            };
+        }
+
+        private int LCM(int a, int b)
         {
             return a * b / GCD(a, b);
         }
         #endregion
     }
+
 }
